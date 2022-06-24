@@ -1,0 +1,11 @@
+ .country:hover {
+  transform: translateY(-5px);
+  }
+
+  .fieldimg{
+  	flex: 1;
+  }
+
+  .fields {
+  	flex: 4;
+  }
