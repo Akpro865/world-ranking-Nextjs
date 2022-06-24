@@ -48,7 +48,7 @@ function Country({country}) {
       	  </div>
       	  <div className='flex justify-between p-2'>
       	  	<div>Languages</div>
-      	  	<div>{Country.currencies ? country.languages.map(({name}) => name).join(", ") : null}</div>
+      	  	<div>{country.currencies ? country.languages.map(({name}) => name).join(", ") : null}</div>
       	  </div>
       	  <div className='flex justify-between p-2'>
       	  	<div>Gini</div>
