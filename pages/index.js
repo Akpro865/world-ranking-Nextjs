@@ -22,11 +22,16 @@ function Home({countries}) {
   };
 
   return (
+    <>
+    <Head>
+      <title>Countries</title>
+    </Head>
   <div className='container mx-auto my-4'>
     <Navbar />
     <Search countries={countries} onChange={onInputChange}/>
     <Countries countries={filteredCountries}/>
-  </div>  
+  </div>
+  </>
   )
 }
 

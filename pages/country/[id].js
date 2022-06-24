@@ -1,10 +1,13 @@
 import axios from 'axios'
-import Image from 'next/image'
+import Head from 'next/head'
 
 
 function Country({country}) {
-	console.log(country)
   return (
+    <>
+    <Head>
+      <title>{country.name}</title>
+    </Head>
     <div className='md:flex md:mx-28 my-6'>
         <div className=''>
       	  <div className='shadow-xl rounded-md p-4 m-5 cursor-pointer bg-background-color-light'>
@@ -41,11 +44,11 @@ function Country({country}) {
       	  </div>
       	  <div className='flex justify-between p-2'>
       	  	<div>currencies</div>
-      	  	<div>{country.currencies.map(({name}) => name).join(", ")}</div>
+      	  	<div>{country.currencies ? country.currencies.map(({name}) => name).join(", ") : null}</div>
       	  </div>
       	  <div className='flex justify-between p-2'>
       	  	<div>Languages</div>
-      	  	<div>{country.languages.map(({name}) => name).join(", ")}</div>
+      	  	<div>{Country.currencies ? country.languages.map(({name}) => name).join(", ") : null}</div>
       	  </div>
       	  <div className='flex justify-between p-2'>
       	  	<div>Gini</div>
@@ -57,6 +60,7 @@ function Country({country}) {
       	  </div>
       	</div>
     </div>
+    </>
   )
 }
 
