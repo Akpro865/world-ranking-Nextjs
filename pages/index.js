@@ -25,6 +25,7 @@ function Home({countries}) {
     <>
     <Head>
       <title>Countries</title>
+      <meta name="google-site-verification" content="cgEFoYp1tdCeUPtzHXEQ6hjz0Yj8Tm7udw_-W4a31j4" />
     </Head>
   <div className='container mx-auto my-4'>
     <Navbar />
